@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -56,7 +50,8 @@ a:visited {
   background-color: black;
   padding-left: 2rem;
   min-width: 240px;
-  height: 91vh;
+  height: 95vh;
+  font-size: 2vh;
 }
 #logo {
   width: 10rem;
@@ -90,10 +85,6 @@ a:visited {
 }
 /* Navbar */
 
-#first {
-  background-color: black;
-  font-size: 2vh;
-}
 #logo {
   width: 10vw;
 }
@@ -263,15 +254,15 @@ a:visited {
 }
 
 .profilePhotoDiv {
-  width: 3.5rem;
-  aspect-ratio: 1/1;
+  max-width: 60px;
+  min-width: 50px;
+  aspect-ratio: 1/1 !important;
   overflow: hidden;
 }
 
 .profileImg,
 .artistImg {
   width: auto;
-  height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
@@ -398,61 +389,7 @@ a:link {
 a:hover {
   color: grey;
 }
-@media screen and (max-width: 768px) {
-  #cardstart,
-  #firstAlbumRow,
-  #secondAlbumRow,
-  #topsidecards,
-  #mainrow {
-    display: flex;
 
-    align-items: center;
-  }
-
-  #first,
-  .prev-next-buttons {
-    display: none;
-  }
-  #mob {
-    display: contents;
-  }
-  #nav-5 {
-    background-color: black;
-    width: 100vw;
-  }
-  .accountInfo {
-    width: 15rem;
-    display: flex;
-    align-items: flex-end;
-  }
-}
-@media screen and (max-width: 1700px) {
-  .accountInfo {
-    width: 15rem;
-    display: flex;
-    align-items: flex-end;
-  }
-  #first {
-    height: 91vh;
-  }
-  .scrollit {
-    overflow-y: scroll;
-    height: 71vh;
-  }
-  body {
-    background-color: black;
-  }
-}
-@media screen and (max-width: 1200px) {
-  #first {
-    height: 91vh;
-  }
-
-  .scrollit {
-    overflow-y: scroll;
-    height: 80vh;
-  }
-}
 i {
   cursor: pointer;
 }

@@ -37,9 +37,9 @@ function Homepage() {
             <div className="row" id="cardstart">
               <h1 className="col-12 mb-4 d-flex">Good Morning</h1>
               {albumsFromRedux ? (
-                albumsFromRedux?.map((album: any) => (
-                  <GoodMorningCard data={album} />
-                ))
+                albumsFromRedux
+                  .slice(0, 8)
+                  .map((album: any) => <GoodMorningCard data={album} />)
               ) : (
                 <p>hi</p>
               )}
@@ -49,12 +49,6 @@ function Homepage() {
               <h2 className="col-12 mb-4 d-flex">Recently Played</h2>
               <div className="col-12 pl-3 row" id="firstAlbumRow">
                 <RecentlyPlayedCard />
-              </div>
-
-              <div className="col-md-8 col-lg-12 pl-3 row" id="secondAlbumRow">
-                <div className="albumCard">
-                  <img className="col-11" src="" alt="" />
-                </div>
               </div>
             </div>
           </div>

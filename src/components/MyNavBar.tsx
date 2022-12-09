@@ -12,7 +12,7 @@ function MyNavBar() {
     <div id="first" className="col-2">
       <ul id="nav-1" className="nav flex-column">
         <li className="nav-item">
-          <a className="nav-link my-3" href="welcome.html">
+          <a className="nav-link my-3 d-flex" href="welcome.html">
             <img
               id="logo"
               src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
@@ -68,7 +68,7 @@ function MyNavBar() {
         </li>
       </ul>
       <hr style={{ border: "solid 0.5px rgba(128, 128, 128, 0.43)" }} />
-      <ul id="nav-3" className="navScroll">
+      <ul id="nav-3" className="navScroll d-flex flex-column align-items-start">
         <li className="nav-item">
           <a className="nav-link active" href="/">
             Funky Heavy Bluesy
