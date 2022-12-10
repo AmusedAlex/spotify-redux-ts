@@ -9,7 +9,7 @@ import {
 
 function MyNavBar() {
   return (
-    <div id="first" className="col-2">
+    <>
       <ul id="nav-1" className="nav flex-column">
         <li className="nav-item">
           <a className="nav-link my-3 d-flex" href="welcome.html">
@@ -158,7 +158,7 @@ function MyNavBar() {
           </a>
         </li>
       </ul>
-    </div>
+    </>
   );
 }
 

@@ -4,7 +4,6 @@ import AccountInfo from "./AccountInfo";
 import GoodMorningCard from "./GoodMorningCard";
 import LeftRightArrows from "./LeftRightArrows";
 import MusicPlayer from "./MusicPlayer";
-import MyNavBar from "./MyNavBar";
 import RecentlyPlayedCard from "./RecentlyPlayedCard";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -19,44 +18,41 @@ function Homepage() {
   }, []);
 
   return (
-    <div id="s1" className="container-fluid">
-      <div id="n1" className="row">
-        <MyNavBar />
-        {/* <!--Main Page--> */}
-        {/* <!--Prev,Next Buttons--> */}
-        <div id="col-10" className="col-10 pl-5">
-          <div className="row">
-            <LeftRightArrows />
+    <>
+      {/* <!--Main Page--> */}
+      {/* <!--Prev,Next Buttons--> */}
 
-            {/* <!--Account--> */}
-            <AccountInfo />
-          </div>
+      <div className="row">
+        <LeftRightArrows />
 
-          {/* <!--Cards--> */}
-          <div className="row mt-3 scrollit">
-            <div className="row" id="cardstart">
-              <h1 className="col-12 mb-4 d-flex">Good Morning</h1>
-              {albumsFromRedux ? (
-                albumsFromRedux
-                  .slice(0, 8)
-                  .map((album: any) => <GoodMorningCard data={album} />)
-              ) : (
-                <p>hi</p>
-              )}
-            </div>
+        {/* <!--Account--> */}
+        <AccountInfo />
+      </div>
 
-            <div className="row  mt-3" id="mainrow">
-              <h2 className="col-12 mb-4 d-flex">Recently Played</h2>
-              <div className="col-12 pl-3 row" id="firstAlbumRow">
-                <RecentlyPlayedCard />
-              </div>
-            </div>
+      {/* <!--Cards--> */}
+      <div className="row mt-3 scrollit">
+        <div className="row" id="cardstart">
+          <h1 className="col-12 mb-4 d-flex">Good Morning</h1>
+          {albumsFromRedux ? (
+            albumsFromRedux
+              .slice(0, 8)
+              .map((album: any) => <GoodMorningCard data={album} />)
+          ) : (
+            <p>hi</p>
+          )}
+        </div>
+
+        <div className="row  mt-3" id="mainrow">
+          <h2 className="col-12 mb-4 d-flex">Recently Played</h2>
+          <div className="col-12 pl-3 row" id="firstAlbumRow">
+            <RecentlyPlayedCard />
           </div>
         </div>
       </div>
+
       {/* <!-- Music Player Bar --> */}
       <MusicPlayer />
-    </div>
+    </>
   );
 }
 
